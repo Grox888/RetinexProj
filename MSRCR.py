@@ -6,7 +6,7 @@ import base64
 
 img = st.file_uploader('image pls:')
 gama = st.slider('gama', 0.0, 10.0, 1.0, 0.1)
-if img != None:
+if st.button('submit!'):
     img_b = base64.b64encode(img.read())
     imD = base64.b64decode(img_b)
     nparr = np.fromstring(imD, np.uint8)
