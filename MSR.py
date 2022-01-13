@@ -23,6 +23,6 @@ if img != None:
     new_img = cv2.cvtColor(new_img, cv2.COLOR_BGR2RGB)
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     st.write('result of MSR:')
-    st.image(new_img, channels='RGB')
+    st.image(new_img, channels='BGR')
     st.write('original img:')
-    st.image(img, channels='RGB')
+    st.image(img, channels='BGR')
