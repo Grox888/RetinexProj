@@ -20,8 +20,6 @@ if img != None:
             for w in range(new_img.shape[1]):
                 new_img[h, w, i] = (new_img[h, w, i] - min) * 255 / (max - min)
     new_img = np.uint8(new_img)
-    new_img = cv2.cvtColor(new_img, cv2.COLOR_BGR2RGB)
-    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     st.write('result of MSR:')
     st.image(new_img, channels='BGR')
     st.write('original img:')
